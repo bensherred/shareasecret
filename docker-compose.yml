@@ -41,6 +41,23 @@ services:
             test: ["CMD", "mysqladmin", "ping", "-p${DB_PASSWORD}"]
             retries: 3
             timeout: 5s
+    mariadb_tests:
+        image: 'mariadb:10'
+        ports:
+            - '${FORWARD_TEST_DB_PORT:-3360}:3306'
+        environment:
+            MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
+            MYSQL_ROOT_HOST: "%"
+            MYSQL_DATABASE: '${DB_DATABASE}'
+            MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+        volumes:
+            - 'sail-mariadb-tests:/var/lib/mysql'
+        networks:
+            - sail
+        healthcheck:
+            test: ["CMD", "mysqladmin", "ping", "-p${DB_PASSWORD}"]
+            retries: 3
+            timeout: 5s
     redis:
         image: 'redis:alpine'
         ports:
@@ -65,6 +82,8 @@ networks:
         driver: bridge
 volumes:
     sail-mariadb:
+        driver: local
+    sail-mariadb-tests:
         driver: local
     sail-redis:
         driver: local
