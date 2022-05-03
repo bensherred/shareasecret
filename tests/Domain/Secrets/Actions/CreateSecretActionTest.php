@@ -2,13 +2,13 @@
 
 namespace Tests\Domain\Secrets\Actions;
 
-use App\Domain\Secrets\Actions\CreateSecretAction;
-use App\Domain\Secrets\DataTransferObjects\SecretData;
-use App\Domain\Secrets\Mail\SecretShared;
-use App\Domain\Secrets\Models\Secret;
-use App\Domain\Shared\Models\User;
+use Domain\Secrets\Actions\CreateSecretAction;
+use Domain\Secrets\DataTransferObjects\SecretData;
+use Domain\Secrets\Mail\SecretShared;
+use Domain\Secrets\Models\Secret;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Facades\Mail;
+use Domain\Shared\Models\User;
 use Tests\TestCase;
 
 class CreateSecretActionTest extends TestCase

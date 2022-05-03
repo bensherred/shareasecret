@@ -2,7 +2,7 @@
 
 namespace Tests\Domain\Secrets\Models;
 
-use App\Domain\Secrets\Models\Secret;
+use Domain\Secrets\Models\Secret;
 use Tests\TestCase;
 
 class SecretTest extends TestCase

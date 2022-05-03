@@ -2,12 +2,12 @@
 
 namespace Database\Factories;
 
-use App\Domain\Secrets\Models\Secret;
+use Domain\Secrets\Models\Secret;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Domain\Secrets\Models\Secret>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\Domain\Secrets\Models\Secret>
  */
 class SecretFactory extends Factory
 {

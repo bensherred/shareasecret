@@ -2,8 +2,8 @@
 
 namespace Tests\Domain\Secrets\Jobs;
 
-use App\Domain\Secrets\Jobs\DeleteExpiredSecretsJob;
-use App\Domain\Secrets\Models\Secret;
+use Domain\Secrets\Jobs\DeleteExpiredSecretsJob;
+use Domain\Secrets\Models\Secret;
 use Tests\TestCase;
 
 class DeleteExpiredSecretsJobTest extends TestCase

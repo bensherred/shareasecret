@@ -2,8 +2,8 @@
 
 namespace Tests\Domain\Secrets\Actions;
 
-use App\Domain\Secrets\Actions\DeleteSecretAction;
-use App\Domain\Secrets\Models\Secret;
+use Domain\Secrets\Actions\DeleteSecretAction;
+use Domain\Secrets\Models\Secret;
 use Tests\TestCase;
 
 class DeleteSecretActionTest extends TestCase
